@@ -33,7 +33,7 @@ Add a screenshot or GIF here to showcase the UI.
 
 ![image](https://github.com/MdSaifAli063/Daily-Quote/blob/8261d6e970e18f68b79fa3da478f28c708bb2462/Screenshot%202025-09-03%20003103.png)
 
--Liked view
+-Favorite view
 
 ![image](https://github.com/MdSaifAli063/Daily-Quote/blob/6444311597d02608e5bebfd0d9f91ae8786524b2/Screenshot%202025-09-03%20004010.png)
 ---
