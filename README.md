@@ -31,9 +31,7 @@ Unlock a spark of inspiration every day. Browse, filter, listen, save, and share
 
 Add a screenshot or GIF here to showcase the UI.
 
-- Example: docs/screenshot.png
-- Tip: Drag-and-drop a GIF or PNG into this README.
-
+![image](https://github.com/MdSaifAli063/Daily-Quote/blob/8261d6e970e18f68b79fa3da478f28c708bb2462/Screenshot%202025-09-03%20003103.png)
 ---
 
 ## 🚀 Quick Start
