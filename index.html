@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Quote</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="brand">
+        <i class="fa-solid fa-sparkles"></i>
+        <h1>Daily Quote</h1>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="favoritesOpenBtn" class="icon-btn" aria-label="Open Favorites" title="Favorites">
+          <i class="fa-solid fa-heart"></i>
+          <span id="favoritesCount" class="badge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="controls">
+        <div class="control-group">
+          <label for="categorySelect"><i class="fa-solid fa-filter"></i> Category</label>
+          <select id="categorySelect" aria-label="Quote category">
+            <option value="All">All</option>
+            <option value="Motivation">Motivation</option>
+            <option value="Wisdom">Wisdom</option>
+            <option value="Humor">Humor</option>
+            <option value="Productivity">Productivity</option>
+            <option value="Perseverance">Perseverance</option>
+          </select>
+        </div>
+
+        <div class="control-group autoplay">
+          <label for="autoplayToggle"><i class="fa-solid fa-play"></i> Auto-play</label>
+          <div class="toggle-row">
+            <label class="switch">
+              <input type="checkbox" id="autoplayToggle" />
+              <span class="slider"></span>
+            </label>
+
+            <select id="autoplaySpeed" aria-label="Autoplay speed">
+              <option value="5">Every 5s</option>
+              <option value="10" selected>Every 10s</option>
+              <option value="20">Every 20s</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section id="container" class="quote-section">
+        <div id="quoteCard" class="quote-card">
+          <div id="quoteContainer" class="quote-container">
+            <p class="quote-text">
+              <i class="fa-solid fa-quote-left quote-mark" aria-hidden="true"></i>
+              <span id="quoteText"></span>
+              <i class="fa-solid fa-quote-right quote-mark" aria-hidden="true"></i>
+            </p>
+            <p id="quoteGenius" class="quote-author">
+              <!-- author will render here -->
+            </p>
+            <div class="tags">
+              <span id="quoteCategory" class="tag"></span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="quoteButton" class="btn primary">
+              <i class="fa-solid fa-shuffle"></i>
+              New Quote
+            </button>
+
+            <div class="btn-group">
+              <button id="copyBtn" class="btn ghost" title="Copy">
+                <i class="fa-solid fa-copy"></i>
+                Copy
+              </button>
+              <button id="speakBtn" class="btn ghost" title="Speak">
+                <i class="fa-solid fa-volume-high"></i>
+                Speak
+              </button>
+              <button id="shareBtn" class="btn ghost" title="Share">
+                <i class="fa-solid fa-share-nodes"></i>
+                Share
+              </button>
+              <button id="favBtn" class="btn ghost" title="Save to favorites" aria-pressed="false">
+                <i class="fa-regular fa-heart"></i>
+                Favorite
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Pro tip: Use Auto-play to cycle through inspiration. Favorites are saved on this device.</small>
+    </footer>
+  </div>
+
+  <!-- Favorites Drawer -->
+  <aside id="favoritesDrawer" class="drawer" aria-hidden="true" aria-labelledby="drawerTitle">
+    <div class="drawer-header">
+      <h2 id="drawerTitle"><i class="fa-solid fa-heart"></i> Favorites</h2>
+      <button id="favoritesCloseBtn" class="icon-btn" aria-label="Close favorites">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div id="favoritesList" class="drawer-content">
+      <!-- Favorite items render here -->
+    </div>
+  </aside>
+
+  <!-- Overlay for Drawer -->
+  <div id="overlay" class="overlay" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

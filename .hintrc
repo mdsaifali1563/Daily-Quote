@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "border-color: color-mix(in oklab, var(--accent) 35%, transparent)",
+          "border-color: color-mix(in oklab, var(--danger) 40%, transparent)",
+          "scrollbar-gutter",
+          "scrollbar-gutter: stable both-edges"
+        ]
+      }
+    ]
+  }
+}
